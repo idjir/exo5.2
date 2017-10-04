@@ -44,24 +44,24 @@ public class Fraction
     }
     
     
-    public Fraction Addition(Fraction a, Fraction b)
+    public Fraction Addition( Fraction b)
     {
         
         Fraction res= new Fraction(num, denum);
         
-         if(b.denum!=a.denum)
+         if(b.denum!=this.denum)
         {
-            a.num= a.num*b.denum;
-            b.num=b.num*a.denum;
+            this.num= this.num*b.denum;
+            b.num=b.num*this.denum;
             
-            res.num=a.num+b.num;
-            res.denum=a.denum*b.denum;
+            res.num=this.num+b.num;
+            res.denum=this.denum*b.denum;
             
          }
          else
          {
-             res.num=a.num+b.num;
-             res.denum=a.denum;
+             res.num=this.num+b.num;
+             res.denum=this.denum;
           }
         
         return res;
@@ -69,9 +69,9 @@ public class Fraction
        
     }
     
-    public boolean Test(Fraction a,Fraction b)
+    public boolean Test(Fraction b)
     {
-        double fl1=a.FractionFloat();
+        double fl1=this.FractionFloat();
         double fl2=b.FractionFloat();
         
         double res;
