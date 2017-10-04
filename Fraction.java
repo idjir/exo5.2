@@ -78,8 +78,11 @@ public class Fraction
         res= fl1-fl2;
         
         if(res==0)
-        {return true;}
-        else return false;
+        {   System.out.println("vrai egal");
+            return true;}
+        else {
+            System.out.println("faux pas egal");
+            return false;}
     
     
     }
